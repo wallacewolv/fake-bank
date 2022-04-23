@@ -6,9 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from './content/content.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ContentComponent } from './components/content/content.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
