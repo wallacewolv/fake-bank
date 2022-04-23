@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'fake-bank-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.sass']
 })

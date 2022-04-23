@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-content',
+  selector: 'fake-bank-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.sass']
 })
