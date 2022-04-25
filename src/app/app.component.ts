@@ -17,7 +17,7 @@ export class AppComponent {
       const dialogRef = this.dialog.open(AppComponent, {
         height: '350px'
       });
-  
+
       dialogRef.afterClosed().subscribe(result => {
         console.log(`Dialog result: ${result}`);
       });
