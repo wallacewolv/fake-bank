@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Options } from 'src/app/Models/options.model';
 import Typed from 'typed.js';
 
 
@@ -7,13 +8,21 @@ import Typed from 'typed.js';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.sass']
 })
+
 export class ContentComponent implements OnInit {
+
+  options: Options = new Options();
+  typed: any;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.setOptions();
+    this.setTiped();
+  }
 
-    const options = {
+  setOptions() {
+    this.options = {
       stringsElement: '#typed-strings',
       strings: [
         'Fake Banking com juros amigo',
@@ -30,8 +39,9 @@ export class ContentComponent implements OnInit {
       startDelay: 1000,
       loop: true
     };
-
-    const typed = new Typed('.typing-element', options);
   }
 
+  setTiped() {
+    this.typed = new Typed('.typing-element', this.options);
+  }
 }
