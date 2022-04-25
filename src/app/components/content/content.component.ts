@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Options } from 'src/app/Models/options.model';
 import Typed from 'typed.js';
 
@@ -14,7 +15,9 @@ export class ContentComponent implements OnInit {
   options: Options = new Options();
   typed: any;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.setOptions();
@@ -43,5 +46,9 @@ export class ContentComponent implements OnInit {
 
   setTiped() {
     this.typed = new Typed('.typing-element', this.options);
+  }
+
+  goRegistration() {
+    this.router.navigate(['registration']);
   }
 }
